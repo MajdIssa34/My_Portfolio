@@ -4,32 +4,24 @@ import 'package:google_fonts/google_fonts.dart';
 class MyExperience extends StatelessWidget {
   final List<Experience> experiences = [
     Experience(
-      title: "Shift Manager at ALDI",
-      date: "Jan 2023 - Present",
-      responsibilities: [
-        "Managed team and operations to ensure efficiency.",
-        "Trained new employees.",
-        "Handled customer service and resolved issues.",
-      ],
-    ),
-    Experience(
       title: "Intern at Macquarie University",
       date: "Jan 2023 - Jul 2023",
       responsibilities: [        
-        "Assisted in research projects and software development.",
-        "Contributed to developing educational software tools.",
-        "Collaborated with a team to design user-friendly interfaces.",
-        "Tested and debugged code to ensure quality.",
+        "Improved engagement by 40% and reduced website load times by 35% through optimized algorithms",
+        "Developed an interactive website guiding over 5,000 students in selecting academic majors.",
+        "Achieved a 95% positive feedback score from usability testing with students and staff.",
+        "Improved engagement by 40% and reduced website load times by 35% throughoptimized algorithms.",
       ],
     ),
     Experience(
-      title: "Personal Tutor",
-      date: "Feb 2018 - Jul 2022",
+      title: "Shift Manager at ALDI",
+      date: "Jan 2023 - Present",
       responsibilities: [
-        "Tutored students in various subjects.",
-        "Developed personalized lesson plans.",
-        "Assessed student progress and provided feedback.",
-        "Helped students prepare for exams and assignments.",
+        "Ranked in the top 5% of most efficient ALDI workers in NSW, maintaining Operational Efficiency (OE) above 92% during all shifts.",
+        "Managed inventory restocking with 98% accuracy, minimizing stock discrepancies.",
+        "Consistently met Key Performance Indicators (KPIs) for sales, cleanliness, and customer experience.",
+        "Address and solve customer service issues",
+        "Briefed teams on priorities, optimized task assignments, and ensured smooth daily operations."
       ],
     ),
   ];

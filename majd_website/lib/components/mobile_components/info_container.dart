@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class InfoContainer extends StatelessWidget {
   const InfoContainer({super.key, required this.isDesktop});
@@ -33,10 +34,8 @@ class InfoContainer extends StatelessWidget {
                             color: Colors.deepPurple,
                           ),
                         ),
-                        // Static structure remains stable
                         SizedBox(
-                          height:
-                              isDesktop ? 70 : 40, // Keeps the space consistent
+                          height: isDesktop ? 70 : 40,
                           child: AnimatedTextKit(
                             animatedTexts: [
                               RotateAnimatedText(
@@ -58,13 +57,12 @@ class InfoContainer extends StatelessWidget {
                                 duration: const Duration(milliseconds: 2000),
                               ),
                             ],
-                            repeatForever: true, // Keeps the animation moving
+                            repeatForever: true,
                             pause: const Duration(milliseconds: 500),
                           ),
                         ),
                       ],
                     ),
-                    // Static profile picture remains stable
                     Stack(
                       alignment: Alignment.center,
                       children: [
@@ -122,45 +120,143 @@ class InfoContainer extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
+              SizedBox(height: isDesktop ? 20 : 10),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Here are some of the magic wands I use to create awesome things:',
+                  style: GoogleFonts.poppins(
+                    fontSize: isDesktop ? 18 : 12,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepPurple.shade600,
+                  ),
+                  textAlign: TextAlign.center,
+                ),              
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Java Icon
+                  Image.asset(
+                    'assets/images/java.png',
+                    width: isDesktop ? 40 : 30,
+                    height: isDesktop ? 40 : 30,
+                  ),
+                  SizedBox(width: 20), // Space between icons
+                  // JavaScript Icon
+                  Image.asset(
+                    'assets/images/js.png',
+                    width: isDesktop ? 40 : 30,
+                    height: isDesktop ? 40 : 30,
+                  ),
+                  SizedBox(width: 20), // Space between icons
+                  // CSS Icon
+                  Image.asset(
+                    'assets/images/css.png',
+                    width: isDesktop ? 40 : 30,
+                    height: isDesktop ? 40 : 30,
+                  ),
+                  SizedBox(width: 20), // Space between icons
+                  // HTML Icon
+                  Image.asset(
+                    'assets/images/html.png',
+                    width: isDesktop ? 40 : 30,
+                    height: isDesktop ? 40 : 30,
+                  ),
+                  SizedBox(width: 20), // Space between icons
+                  // Flutter Icon
+                  Image.asset(
+                    'assets/images/flutter.png',
+                    width: isDesktop ? 40 : 30,
+                    height: isDesktop ? 40 : 30,
+                  ),
+                  SizedBox(width: 20), // Space between icons
+                  // Python Icon
+                  Image.asset(
+                    'assets/images/python.png',
+                    width: isDesktop ? 40 : 30,
+                    height: isDesktop ? 40 : 30,
+                  ),
+                  SizedBox(width: 20), // Space between icons
+                  // MongoDB Icon
+                  Image.asset(
+                    'assets/images/mongo.png',
+                    width: isDesktop ? 40 : 30,
+                    height: isDesktop ? 40 : 30,
+                  ),
+                  SizedBox(width: 20), // Space between icons
+                  // PostgreSQL Icon
+                  Image.asset(
+                    'assets/images/postgresql.png',
+                    width: isDesktop ? 40 : 30,
+                    height: isDesktop ? 40 : 30,
+                  ),
+                  SizedBox(width: 20), // Space between icons
+                  // MySQL Icon
+                  Image.asset(
+                    'assets/images/mysql.png',
+                    width: isDesktop ? 40 : 30,
+                    height: isDesktop ? 40 : 30,
+                  ),
+                ],
+              ),
               SizedBox(height: isDesktop ? 15 : 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SizedBox(
-                    height: isDesktop ? 30 : 20, // Ensure consistent height
-                    child: AnimatedTextKit(
-                      animatedTexts: [
-                        FadeAnimatedText(
-                          'High Distinction',
-                          textStyle: GoogleFonts.poppins(
-                            fontSize: isDesktop ? 16 : 12,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.deepPurple,
-                          ),
-                          duration: const Duration(milliseconds: 2000),
+                    height: isDesktop ? 30 : 20,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        AnimatedTextKit(
+                          animatedTexts: [
+                            FadeAnimatedText(
+                              'High Distinction',
+                              textStyle: GoogleFonts.poppins(
+                                fontSize: isDesktop ? 16 : 12,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepPurple,
+                              ),
+                              duration: const Duration(milliseconds: 2000),
+                            ),
+                          ],
+                          repeatForever: true,
+                          pause: const Duration(milliseconds: 500),
                         ),
-                        FadeAnimatedText(
-                          'WAM : 87',
-                          textStyle: GoogleFonts.poppins(
-                            fontSize: isDesktop ? 16 : 12,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.deepPurple,
-                          ),
-                          duration: const Duration(milliseconds: 2000),
+                        SizedBox(width: 20),
+                        AnimatedTextKit(
+                          animatedTexts: [
+                            FadeAnimatedText(
+                              'WAM : 87',
+                              textStyle: GoogleFonts.poppins(
+                                fontSize: isDesktop ? 16 : 12,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepPurple,
+                              ),
+                              duration: const Duration(milliseconds: 2000),
+                            ),
+                          ],
+                          repeatForever: true,
+                          pause: const Duration(milliseconds: 500),
                         ),
-                        FadeAnimatedText(
-                          'Dean\'s List',
-                          textStyle: GoogleFonts.poppins(
-                            fontSize: isDesktop ? 16 : 12,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.deepPurple,
-                          ),
-                          duration: const Duration(milliseconds: 2000),
+                        SizedBox(width: 20),
+                        AnimatedTextKit(
+                          animatedTexts: [
+                            FadeAnimatedText(
+                              'Dean\'s List',
+                              textStyle: GoogleFonts.poppins(
+                                fontSize: isDesktop ? 16 : 12,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepPurple,
+                              ),
+                              duration: const Duration(milliseconds: 2000),
+                            ),
+                          ],
+                          repeatForever: true,
+                          pause: const Duration(milliseconds: 500),
                         ),
                       ],
-                      repeatForever: true, // Loop the animation indefinitely
-                      pause: const Duration(
-                          milliseconds: 500), // Pause between transitions
                     ),
                   ),
                 ],

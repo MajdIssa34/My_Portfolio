@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:majd_website/constants/contstant_function.dart';
 
 class MyExperience extends StatelessWidget {
   final List<Experience> experiences = [
@@ -25,7 +26,7 @@ class MyExperience extends StatelessWidget {
       ],
     ),
   ];
-  final bool isDesktop;
+  final int isDesktop;
 
   MyExperience({super.key, required this.isDesktop});
 
@@ -39,7 +40,7 @@ class MyExperience extends StatelessWidget {
           Text(
             "My Experience",
             style: GoogleFonts.poppins(
-              fontSize: isDesktop ? 26 : 18,
+              fontSize: retSize(isDesktop, 26, 18, 14),
               fontWeight: FontWeight.bold,
               color: Colors.deepPurple,
             ),
@@ -77,7 +78,7 @@ class Experience {
 
 class StaggeredExperienceCard extends StatefulWidget {
   final Experience experience;
-  final bool isDesktop;
+  final int isDesktop;
   final Duration delay;
 
   const StaggeredExperienceCard({
@@ -153,7 +154,7 @@ class _StaggeredExperienceCardState extends State<StaggeredExperienceCard>
                 Text(
                   widget.experience.title,
                   style: GoogleFonts.poppins(
-                    fontSize: widget.isDesktop ? 26 : 18,
+                    fontSize: retSize(widget.isDesktop, 26, 18, 14),
                     fontWeight: FontWeight.bold,
                     color: Colors.deepPurple,
                   ),
@@ -162,7 +163,7 @@ class _StaggeredExperienceCardState extends State<StaggeredExperienceCard>
                 Text(
                   widget.experience.date,
                   style: GoogleFonts.poppins(
-                    fontSize: widget.isDesktop ? 20 : 14,
+                    fontSize: retSize(widget.isDesktop, 20, 14, 10),
                     color: Colors.deepPurple.shade700,
                   ),
                 ),
@@ -179,7 +180,7 @@ class _StaggeredExperienceCardState extends State<StaggeredExperienceCard>
                             child: Text(
                               "- $responsibility",
                               style: GoogleFonts.poppins(
-                                fontSize: widget.isDesktop ? 18 : 12,
+                                fontSize: retSize(widget.isDesktop, 18, 12, 8),
                                 color: Colors.deepPurple.shade700,
                               ),
                             ),

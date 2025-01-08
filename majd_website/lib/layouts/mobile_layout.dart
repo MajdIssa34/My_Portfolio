@@ -37,6 +37,7 @@ class MobileLayout extends StatelessWidget {
             width: 50,
           ),
         ),
+        titleSpacing: 2,
         backgroundColor: Colors.deepPurple.shade100,
         elevation: 0,
         actions: <Widget>[
@@ -48,7 +49,7 @@ class MobileLayout extends StatelessWidget {
               'Info',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold,
-                fontSize: 12,
+                fontSize: 10,
                 color: Colors.deepPurple,
               ),
             ),
@@ -61,7 +62,7 @@ class MobileLayout extends StatelessWidget {
               'Projects',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold,
-                fontSize: 12,
+                fontSize: 10,
                 color: Colors.deepPurple,
               ),
             ),
@@ -74,7 +75,7 @@ class MobileLayout extends StatelessWidget {
               'Experience',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold,
-                fontSize: 12,
+                fontSize: 10,
                 color: Colors.deepPurple,
               ),
             ),
@@ -87,7 +88,7 @@ class MobileLayout extends StatelessWidget {
               'Education',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold,
-                fontSize: 12,
+                fontSize: 10,
                 color: Colors.deepPurple,
               ),
             ),
@@ -100,7 +101,7 @@ class MobileLayout extends StatelessWidget {
               'Contact',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold,
-                fontSize: 12,
+                fontSize: 10,
                 color: Colors.deepPurple,
               ),
             ),
@@ -114,28 +115,28 @@ class MobileLayout extends StatelessWidget {
             Container(
               key: _infoKey,
               child: const InfoContainer(
-                isDesktop: false,
+                isDesktop: 0,
               ),
             ),
             Container(
               key: _projectsKey,
               child: MyProjects(
-                isDesktop: false,
+                isDesktop: 0,
               ),
             ),
             Container(
               key: _experienceKey,
               child: MyExperience(
-                isDesktop: false,
+                isDesktop: 0,
               ),
             ),
             Container(
               key: _educationKey,
-              child: MyEducation(isDesktop: true),
+              child: MyEducation(isDesktop: 0),
             ),
             Container(
               key: _contactKey,
-              child: const MyContact(isDesktop: false),
+              child: const MyContact(isDesktop: 0),
             ),
             //const FunContainer(isDesktop: false),
           ],

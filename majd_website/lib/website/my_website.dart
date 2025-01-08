@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:majd_website/layouts/desktop_layout.dart';
 import 'package:majd_website/layouts/mobile_layout.dart';
+import 'package:majd_website/layouts/small_layout.dart';
 
 class MyWebsite extends StatelessWidget {
   const MyWebsite({super.key});
@@ -13,17 +14,18 @@ class MyWebsite extends StatelessWidget {
     );
   }
 
-  Widget _getScreen(BuildContext context){
-
+  Widget _getScreen(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
-    
-    const mobileWidthThreshold = 800;
 
-    if (screenWidth < mobileWidthThreshold) {
+    const mobileWidthThreshold = 700;
+    const smallest = 400;
+
+    if (screenWidth > mobileWidthThreshold) {
+      return DesktopLayout();
+    } else if (screenWidth < mobileWidthThreshold && screenWidth > smallest) {
       return MobileLayout();
     } else {
-      return DesktopLayout();
+      return SmallLayout();
     }
   }
-
 }

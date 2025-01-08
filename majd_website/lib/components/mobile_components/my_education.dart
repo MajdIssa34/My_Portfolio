@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:majd_website/constants/contstant_function.dart';
 
 class MyEducation extends StatelessWidget {
   const MyEducation({super.key, required this.isDesktop});
 
-  final bool isDesktop;
+  final int isDesktop;
 
   Widget educationCard({
     required String degree,
@@ -36,7 +37,7 @@ class MyEducation extends StatelessWidget {
                       Text(
                         degree,
                         style: GoogleFonts.poppins(
-                          fontSize: isDesktop ? 22 : 16,
+                          fontSize: retSize(isDesktop, 22, 16, 10),
                           fontWeight: FontWeight.bold,
                           color: Colors.deepPurple,
                         ),
@@ -44,14 +45,14 @@ class MyEducation extends StatelessWidget {
                       Text(
                         university,
                         style: GoogleFonts.poppins(
-                          fontSize: isDesktop ? 18 : 14,
+                          fontSize: retSize(isDesktop, 18, 14, 8),
                           color: Colors.deepPurple,
                         ),
                       ),
                       Text(
                         years,
                         style: GoogleFonts.poppins(
-                          fontSize: isDesktop ? 16 : 12,
+                          fontSize: retSize(isDesktop, 16, 12, 8),
                           color: Colors.deepPurple,
                         ),
                       ),
@@ -61,8 +62,8 @@ class MyEducation extends StatelessWidget {
                 const SizedBox(width: 16),               
                 Image.asset(
                   iconPath,
-                  width: isDesktop ? 120 : 36,
-                  height: isDesktop ? 120 : 36,
+                  width: retSize(isDesktop, 120, 55, 0),
+                  height: retSize(isDesktop, 120, 55, 0),
                   fit: BoxFit.contain,
                 ),
               ],
@@ -71,7 +72,7 @@ class MyEducation extends StatelessWidget {
             Text(
               "Achievements:",
               style: GoogleFonts.poppins(
-                fontSize: isDesktop ? 18 : 14,
+                fontSize: retSize(isDesktop, 18, 14, 8),
                 fontWeight: FontWeight.bold,
                 color: Colors.deepPurple,
               ),
@@ -79,7 +80,7 @@ class MyEducation extends StatelessWidget {
             Text(
               achievements,
               style: GoogleFonts.poppins(
-                fontSize: isDesktop ? 16 : 12,
+                fontSize: retSize(isDesktop, 16, 12, 8),
                 color: Colors.deepPurple,
               ),
             ),
@@ -87,7 +88,7 @@ class MyEducation extends StatelessWidget {
             Text(
               "Notable Courses:",
               style: GoogleFonts.poppins(
-                fontSize: isDesktop ? 18 : 14,
+                fontSize: retSize(isDesktop, 18, 14, 8),
                 fontWeight: FontWeight.bold,
                 color: Colors.deepPurple,
               ),
@@ -107,7 +108,7 @@ class MyEducation extends StatelessWidget {
                             child: Text(
                               course,
                               style: GoogleFonts.poppins(
-                                fontSize: isDesktop ? 16 : 12,
+                                fontSize: retSize(isDesktop, 16, 12, 8),
                                 color: Colors.deepPurple,
                               ),
                             ),
@@ -141,7 +142,7 @@ class MyEducation extends StatelessWidget {
           Text(
             "My Education",
             style: GoogleFonts.poppins(
-              fontSize: isDesktop ? 28 : 22,
+              fontSize: retSize(isDesktop, 28, 22, 16),
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
@@ -163,7 +164,7 @@ class MyEducation extends StatelessWidget {
             iconPath: "assets/images/MQ.png", // Add MQ logo here
           ),
           educationCard(
-            degree: "Bachelor of Computer Engineering (1 Year)",
+            degree: "Bachelor of Computer Engineering",
             university: "Holy Spirit University of Kaslik, Lebanon",
             years: "2021 - 2022",
             achievements: "- GPA: 3.3",

@@ -125,25 +125,24 @@ class DesktopLayout extends StatelessWidget {
               children: [
                 Container(
                   key: _infoKey,
-                  child: const InfoContainer(isDesktop: true),
+                  child: const InfoContainer(isDesktop: 1),
                 ),
                 Container(
                   key: _projectsKey,
-                  child: MyProjects(isDesktop: true),
+                  child: MyProjects(isDesktop: 1),
                 ),
                 Container(
                   key: _experienceKey,
-                  child: MyExperience(isDesktop: true),
+                  child: MyExperience(isDesktop: 1),
                 ),
                 Container(
                   key: _educationKey,
-                  child: MyEducation(isDesktop: true),
+                  child: MyEducation(isDesktop: 1),
                 ),
                 Container(
                   key: _contactKey,
-                  child: const MyContact(isDesktop: true),
+                  child: const MyContact(isDesktop: 1),
                 ),
-                //const FunContainer(isDesktop: true),
               ],
             ),
           ),

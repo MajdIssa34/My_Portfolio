@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:majd_website/constants/contstant_function.dart';
 
 class MyButton extends StatefulWidget {
   final Function()? onTap;
   final String str;
-  final bool isDesktop;
+  final int isDesktop;
   const MyButton({super.key, required this.onTap, required this.str, required this.isDesktop});
 
   @override
@@ -43,7 +44,7 @@ class _MyButtonState extends State<MyButton> {
             child: Text(
               widget.str,
               style: GoogleFonts.poppins(
-                fontSize: widget.isDesktop ? 16 : 12,
+                fontSize: retSize(widget.isDesktop, 16, 12, 8),
                 color: _isHovered ? Colors.white70 : Colors.white,
                 fontWeight: _isHovered ? FontWeight.bold : FontWeight.normal,
               ),

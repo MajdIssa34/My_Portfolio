@@ -1,11 +1,12 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:majd_website/constants/contstant_function.dart';
 
 class InfoContainer extends StatelessWidget {
   const InfoContainer({super.key, required this.isDesktop});
 
-  final bool isDesktop;
+  final int isDesktop;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class InfoContainer extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(isDesktop ? 30 : 15),
+                padding: EdgeInsets.all(retSize(isDesktop, 30, 15, 10),),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -29,18 +30,18 @@ class InfoContainer extends StatelessWidget {
                         Text(
                           "Hello, I am",
                           style: GoogleFonts.poppins(
-                            fontSize: isDesktop ? 28 : 20,
+                            fontSize: retSize(isDesktop, 30, 20, 10),
                             color: Colors.deepPurple,
                           ),
                         ),
                         SizedBox(
-                          height: isDesktop ? 70 : 40,
+                          height: retSize(isDesktop, 70, 40, 25),
                           child: AnimatedTextKit(
                             animatedTexts: [
                               RotateAnimatedText(
                                 'Majd Issa',
                                 textStyle: GoogleFonts.poppins(
-                                  fontSize: isDesktop ? 35 : 20,
+                                  fontSize: retSize(isDesktop, 35, 18, 15),
                                   fontWeight: FontWeight.bold,
                                   color: Colors.deepPurple,
                                 ),
@@ -49,7 +50,7 @@ class InfoContainer extends StatelessWidget {
                               RotateAnimatedText(
                                 'a Software Developer',
                                 textStyle: GoogleFonts.poppins(
-                                  fontSize: isDesktop ? 35 : 20,
+                                  fontSize: retSize(isDesktop, 35, 18, 15),
                                   fontWeight: FontWeight.bold,
                                   color: Colors.deepPurple.shade400,
                                 ),
@@ -68,8 +69,8 @@ class InfoContainer extends StatelessWidget {
                         Transform.rotate(
                           angle: -0.2,
                           child: Container(
-                            width: isDesktop ? 160 : 120,
-                            height: isDesktop ? 160 : 120,
+                            width: retSize(isDesktop, 160, 120, 80),
+                            height: retSize(isDesktop, 160, 120, 80),
                             decoration: BoxDecoration(
                               color: Colors.deepPurple.shade100,
                               borderRadius: BorderRadius.circular(12),
@@ -79,8 +80,8 @@ class InfoContainer extends StatelessWidget {
                         Transform.rotate(
                           angle: 0.2,
                           child: Container(
-                            width: isDesktop ? 160 : 120,
-                            height: isDesktop ? 160 : 120,
+                            width: retSize(isDesktop, 160, 120, 80),
+                            height: retSize(isDesktop, 160, 120, 80),
                             decoration: BoxDecoration(
                               color: Colors.deepPurple.shade200,
                               borderRadius: BorderRadius.circular(12),
@@ -90,8 +91,8 @@ class InfoContainer extends StatelessWidget {
                         Transform.rotate(
                           angle: 0,
                           child: Container(
-                            width: isDesktop ? 160 : 120,
-                            height: isDesktop ? 160 : 120,
+                            width: retSize(isDesktop, 160, 120, 80),
+                            height: retSize(isDesktop, 160, 120, 80),
                             decoration: BoxDecoration(
                               color: Colors.deepPurple.shade300,
                               borderRadius: BorderRadius.circular(12),
@@ -107,25 +108,25 @@ class InfoContainer extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: isDesktop ? 15 : 10),
+              SizedBox(height: retSize(isDesktop, 15, 12, 8)),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   "Motivated and skilled software developer with a Bachelor of Information Technology, majoring in Software Technology, from Macquarie University. Experienced in full-stack development with proficiency in Java, JavaScript, HTML, CSS, Spring Boot, PostgreSQL, MongoDB, and Flutter. Adept at developing cross-platform applications, backend systems, and data-driven solutions. Passionate about building efficient, scalable systems and continuously adapting to new technologies and challenges. Ready to contribute and support any technology team with a versatile skill set and problem-solving approach.",
                   style: GoogleFonts.poppins(
-                    fontSize: isDesktop ? 16 : 12,
+                    fontSize: retSize(isDesktop, 15, 12, 8),
                     color: Colors.deepPurple,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(height: isDesktop ? 20 : 10),
+              SizedBox(height: retSize(isDesktop, 20, 10, 7)),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   'Here are some of the magic wands I use to create awesome things:',
                   style: GoogleFonts.poppins(
-                    fontSize: isDesktop ? 18 : 12,
+                    fontSize: retSize(isDesktop, 18, 12, 8),
                     fontWeight: FontWeight.bold,
                     color: Colors.deepPurple.shade600,
                   ),
@@ -138,73 +139,73 @@ class InfoContainer extends StatelessWidget {
                   // Java Icon
                   Image.asset(
                     'assets/images/java.png',
-                    width: isDesktop ? 40 : 30,
-                    height: isDesktop ? 40 : 30,
+                    width: retSize(isDesktop, 40, 30, 14),
+                    height: retSize(isDesktop, 40, 30, 14),
                   ),
                   SizedBox(width: 20), // Space between icons
                   // JavaScript Icon
                   Image.asset(
                     'assets/images/js.png',
-                    width: isDesktop ? 40 : 30,
-                    height: isDesktop ? 40 : 30,
+                    width: retSize(isDesktop, 40, 30, 14),
+                    height: retSize(isDesktop, 40, 30, 14),
                   ),
                   SizedBox(width: 20), // Space between icons
                   // CSS Icon
                   Image.asset(
                     'assets/images/css.png',
-                    width: isDesktop ? 40 : 30,
-                    height: isDesktop ? 40 : 30,
+                    width: retSize(isDesktop, 40, 30, 14),
+                    height: retSize(isDesktop, 40, 30, 14),
                   ),
                   SizedBox(width: 20), // Space between icons
                   // HTML Icon
                   Image.asset(
                     'assets/images/html.png',
-                    width: isDesktop ? 40 : 30,
-                    height: isDesktop ? 40 : 30,
+                    width: retSize(isDesktop, 40, 15, 14),
+                    height: retSize(isDesktop, 40, 15, 14),
                   ),
                   SizedBox(width: 20), // Space between icons
                   // Flutter Icon
                   Image.asset(
                     'assets/images/flutter.png',
-                    width: isDesktop ? 40 : 30,
-                    height: isDesktop ? 40 : 30,
+                    width: retSize(isDesktop, 40, 15, 14),
+                    height: retSize(isDesktop, 40, 15, 14),
                   ),
                   SizedBox(width: 20), // Space between icons
                   // Python Icon
                   Image.asset(
                     'assets/images/python.png',
-                    width: isDesktop ? 40 : 30,
-                    height: isDesktop ? 40 : 30,
+                    width: retSize(isDesktop, 40, 15, 14),
+                    height: retSize(isDesktop, 40, 15, 14),
                   ),
                   SizedBox(width: 20), // Space between icons
                   // MongoDB Icon
                   Image.asset(
                     'assets/images/mongo.png',
-                    width: isDesktop ? 40 : 30,
-                    height: isDesktop ? 40 : 30,
+                    width: retSize(isDesktop, 40, 15, 14),
+                    height: retSize(isDesktop, 40, 15, 14),
                   ),
                   SizedBox(width: 20), // Space between icons
                   // PostgreSQL Icon
                   Image.asset(
                     'assets/images/postgresql.png',
-                    width: isDesktop ? 40 : 30,
-                    height: isDesktop ? 40 : 30,
+                    width: retSize(isDesktop, 40, 15, 14),
+                    height: retSize(isDesktop, 40, 15, 14),
                   ),
                   SizedBox(width: 20), // Space between icons
                   // MySQL Icon
                   Image.asset(
                     'assets/images/mysql.png',
-                    width: isDesktop ? 40 : 30,
-                    height: isDesktop ? 40 : 30,
+                    width: retSize(isDesktop, 40, 15, 14),
+                    height: retSize(isDesktop, 40, 15, 14),
                   ),
                 ],
               ),
-              SizedBox(height: isDesktop ? 15 : 10),
+              SizedBox(height: retSize(isDesktop, 15, 10, 5)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SizedBox(
-                    height: isDesktop ? 30 : 20,
+                    height: retSize(isDesktop, 30, 20, 12),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -213,7 +214,7 @@ class InfoContainer extends StatelessWidget {
                             FadeAnimatedText(
                               'High Distinction',
                               textStyle: GoogleFonts.poppins(
-                                fontSize: isDesktop ? 16 : 12,
+                                fontSize: retSize(isDesktop, 16, 12, 8),
                                 fontWeight: FontWeight.bold,
                                 color: Colors.deepPurple,
                               ),
@@ -229,7 +230,7 @@ class InfoContainer extends StatelessWidget {
                             FadeAnimatedText(
                               'WAM : 87',
                               textStyle: GoogleFonts.poppins(
-                                fontSize: isDesktop ? 16 : 12,
+                                fontSize: retSize(isDesktop, 16, 12, 8),
                                 fontWeight: FontWeight.bold,
                                 color: Colors.deepPurple,
                               ),
@@ -245,7 +246,7 @@ class InfoContainer extends StatelessWidget {
                             FadeAnimatedText(
                               'Dean\'s List',
                               textStyle: GoogleFonts.poppins(
-                                fontSize: isDesktop ? 16 : 12,
+                                fontSize: retSize(isDesktop, 16, 12, 8),
                                 fontWeight: FontWeight.bold,
                                 color: Colors.deepPurple,
                               ),

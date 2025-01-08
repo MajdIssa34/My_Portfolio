@@ -2,13 +2,14 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:majd_website/constants/contstant_function.dart';
 import 'package:majd_website/constants/my_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyProjects extends StatefulWidget {
   const MyProjects({super.key, required this.isDesktop});
 
-  final bool isDesktop;
+  final int isDesktop;
   @override
   State<MyProjects> createState() => _MyProjectsState();
 }
@@ -49,16 +50,16 @@ class _MyProjectsState extends State<MyProjects> {
           Text(
             "My Projects",
             style: GoogleFonts.poppins(
-              fontSize: widget.isDesktop ? 26 : 18,
+              fontSize: retSize(widget.isDesktop, 26, 18, 12),
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
           ),
           SizedBox(
-            height: widget.isDesktop ? 10 : 5,
+            height: retSize(widget.isDesktop, 10, 5, 2),
           ),
           SizedBox(
-            height: widget.isDesktop ? 300 : 200,
+            height: retSize(widget.isDesktop, 300, 240, 150),
             child: PageView(
               controller: _pageController,
               children: <Widget>[
@@ -108,8 +109,8 @@ class _MyProjectsState extends State<MyProjects> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(child: MyButton(onTap: _previousPage, str: "Previous", isDesktop: widget.isDesktop), width: widget.isDesktop ? 150 : 100,),
-              SizedBox(child: MyButton(onTap: _nextPage, str: "Next", isDesktop: widget.isDesktop), width: widget.isDesktop ? 150 : 100,)
+              SizedBox(child: MyButton(onTap: _previousPage, str: "Previous", isDesktop: widget.isDesktop), width: retSize(widget.isDesktop, 150, 100, 75),),
+              SizedBox(child: MyButton(onTap: _nextPage, str: "Next", isDesktop: widget.isDesktop), width: retSize(widget.isDesktop, 150, 100, 75),)
             ],
           ),
           DotsIndicator(
@@ -138,7 +139,7 @@ class _MyProjectsState extends State<MyProjects> {
               TypewriterAnimatedText(
                 title,
                 textStyle: GoogleFonts.poppins(
-                  fontSize: widget.isDesktop ? 26 : 18,
+                  fontSize: retSize(widget.isDesktop, 26, 18, 12),
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
@@ -149,27 +150,27 @@ class _MyProjectsState extends State<MyProjects> {
             pause: const Duration(milliseconds: 500),
           ),
         ),
-        SizedBox(height: widget.isDesktop ? 3 : 2),
+        SizedBox(height: 2),
         // Static Date (unchanged)
         Text(
           date,
           style: GoogleFonts.poppins(
-            fontSize: widget.isDesktop ? 22 : 14,
+            fontSize: retSize(widget.isDesktop, 18, 13, 10),
             color: Colors.white,
           ),
           textAlign: TextAlign.center,
         ),
-        SizedBox(height: widget.isDesktop ? 16 : 8),
+        SizedBox(height: retSize(widget.isDesktop, 16, 8, 4)),
         // Updated Description (uniform length and size)
         Text(
           description,
           style: GoogleFonts.poppins(
-            fontSize: widget.isDesktop ? 16 : 12,
+            fontSize: retSize(widget.isDesktop, 16, 12, 7),
             color: Colors.white,
           ),
           textAlign: TextAlign.center,
         ),
-        SizedBox(height: widget.isDesktop ? 16 : 8),
+        SizedBox(height: retSize(widget.isDesktop, 16, 8, 4)),
         // Link to View Project
         SizedBox(
           child: MyButton(
@@ -177,21 +178,9 @@ class _MyProjectsState extends State<MyProjects> {
             str: "View Project",
             isDesktop: widget.isDesktop,
           ),
-          width: widget.isDesktop ? 250 : 150,
-          height: widget.isDesktop ? 60 : 40,
+          width: retSize(widget.isDesktop, 250, 150, 100),
+          //height: retSize(widget.isDesktop, 60, 40, 40),
         ),
-
-        // GestureDetector(
-        //   onTap: () => _launchURL(link),
-        //   child: Text(
-        //     "View Project",
-        //     style: GoogleFonts.poppins(
-        //       fontSize: widget.isDesktop ? 20 : 12,
-        //       color: Colors.blue,
-        //       decoration: TextDecoration.underline,
-        //     ),
-        //   ),
-        // ),
       ],
     );
   }

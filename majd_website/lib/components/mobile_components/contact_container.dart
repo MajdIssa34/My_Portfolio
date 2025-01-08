@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:majd_website/constants/contstant_function.dart';
 import 'package:majd_website/constants/my_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyContact extends StatelessWidget {
   const MyContact({super.key, required this.isDesktop});
 
-  final bool isDesktop;
+  final int isDesktop;
 
   void _launchURL(String url) async {
     if (await canLaunchUrl(Uri.parse(url))) {
@@ -50,14 +51,16 @@ class MyContact extends StatelessWidget {
             ),
             child: Image.asset(
               'assets/images/$path.png',
-              width: isDesktop ? 40 : 30,
-              height: isDesktop ? 40 : 30,
+              width: retSize(isDesktop, 40, 30, 20),
+              height: retSize(isDesktop, 40, 30, 20),
             ),
           ),
         ),
       ),
     );
   }
+
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +73,7 @@ class MyContact extends StatelessWidget {
           Text(
             "Get in Touch",
             style: GoogleFonts.poppins(
-              fontSize: isDesktop ? 28 : 22,
+              fontSize: retSize(isDesktop, 28, 22, 16),
               fontWeight: FontWeight.bold,
               color: Colors.deepPurple.shade900,
             ),
@@ -90,7 +93,7 @@ class MyContact extends StatelessWidget {
                   Text(
                     "Contact Details",
                     style: GoogleFonts.poppins(
-                      fontSize: isDesktop ? 22 : 18,
+                      fontSize: retSize(isDesktop, 22, 18, 12),
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,
                     ),
@@ -99,7 +102,7 @@ class MyContact extends StatelessWidget {
                   Text(
                     "Email:",
                     style: GoogleFonts.poppins(
-                      fontSize: isDesktop ? 18 : 14,
+                      fontSize: retSize(isDesktop, 18, 14, 10),
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,
                     ),
@@ -107,7 +110,7 @@ class MyContact extends StatelessWidget {
                   SelectableText(
                     "issamajd00@gmail.com",
                     style: GoogleFonts.poppins(
-                      fontSize: isDesktop ? 18 : 14,
+                      fontSize: retSize(isDesktop, 18, 14, 10),
                       color: Colors.black87,
                     ),
                   ),
@@ -115,7 +118,7 @@ class MyContact extends StatelessWidget {
                   Text(
                     "Phone:",
                     style: GoogleFonts.poppins(
-                      fontSize: isDesktop ? 18 : 14,
+                      fontSize: retSize(isDesktop, 18, 14, 10),
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,
                     ),
@@ -123,7 +126,7 @@ class MyContact extends StatelessWidget {
                   SelectableText(
                     "+61 411 911 174",
                     style: GoogleFonts.poppins(
-                      fontSize: isDesktop ? 18 : 14,
+                      fontSize: retSize(isDesktop, 18, 14, 10),
                       color: Colors.black87,
                     ),
                   ),
@@ -156,7 +159,7 @@ class MyContact extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: isDesktop ? 200 : 140,
+                  width: retSize(isDesktop, 200, 140, 140),
                   child: MyButton(
                     onTap: () => _launchURL(
                       "https://drive.google.com/file/d/1Xhjn0CE1iIkpkX-atHtR2yLZ8-UFAe0Q/view?usp=sharing",
@@ -165,9 +168,9 @@ class MyContact extends StatelessWidget {
                     isDesktop: isDesktop,
                   ),
                 ),
-                SizedBox(width: isDesktop ? 12 : 6),
+                SizedBox(width: retSize(isDesktop, 12, 6, 2),),
                 SizedBox(
-                  width: isDesktop ? 200 : 140,
+                  width: retSize(isDesktop, 200, 140, 140),
                   child: MyButton(
                     onTap: () => _launchURL(
                       "https://drive.google.com/file/d/1uo3yBnwy_PjgkJ0Sc8BEqq_gD1qbix16/view?usp=sharing",
@@ -175,16 +178,7 @@ class MyContact extends StatelessWidget {
                     str: "View Transcript",
                     isDesktop: isDesktop,
                   ),
-                ),
-                SizedBox(width: isDesktop ? 12 : 6),
-                SizedBox(
-                  width: isDesktop ? 200 : 140,
-                  child: MyButton(
-                    onTap: _sendEmail,
-                    str: "Mail Me",
-                    isDesktop: isDesktop,
-                  ),
-                ),
+                ),              
               ],
             ),
           ),

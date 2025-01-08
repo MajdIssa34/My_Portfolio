@@ -159,7 +159,7 @@ class MyContact extends StatelessWidget {
                   width: isDesktop ? 200 : 140,
                   child: MyButton(
                     onTap: () => _launchURL(
-                      "https://drive.google.com/file/d/1Presq4xtz3qsSodqDCi1ke9BJ4MnXYT-/view?usp=drive_link",
+                      "https://drive.google.com/file/d/1Xhjn0CE1iIkpkX-atHtR2yLZ8-UFAe0Q/view?usp=sharing",
                     ),
                     str: "View Resume",
                     isDesktop: isDesktop,

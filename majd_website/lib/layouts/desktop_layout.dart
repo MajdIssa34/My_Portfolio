@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:majd_website/components/mobile_components/contact_container.dart';
 import 'package:majd_website/components/mobile_components/experiecne.dart';
 import 'package:majd_website/components/mobile_components/info_container.dart';
+import 'package:majd_website/components/mobile_components/my_education.dart';
 import 'package:majd_website/components/mobile_components/projects_container.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -14,6 +15,7 @@ class DesktopLayout extends StatelessWidget {
   final GlobalKey _experienceKey = GlobalKey();
   final GlobalKey _projectsKey = GlobalKey();
   final GlobalKey _contactKey = GlobalKey();
+  final GlobalKey _educationKey = GlobalKey();
 
   void _scrollToSection(GlobalKey key) {
     final context = key.currentContext;
@@ -82,6 +84,19 @@ class DesktopLayout extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
+                    _scrollToSection(_educationKey);
+                  },
+                  child: Text(
+                    'Education',
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.deepPurple,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
                     _scrollToSection(_contactKey);
                   },
                   child: Text(
@@ -104,27 +119,33 @@ class DesktopLayout extends StatelessWidget {
         child: Container(
           width: 800,
           padding: const EdgeInsets.all(16.0),
-          child: ListView(
+          child: SingleChildScrollView(
             controller: _scrollController,
-            children: [
-              Container(
-                key: _infoKey,
-                child: const InfoContainer(isDesktop: true),
-              ),
-              Container(
-                key: _projectsKey,
-                child: MyProjects(isDesktop: true),
-              ),
-              Container(
-                key: _experienceKey,
-                child: MyExperience(isDesktop: true),
-              ),
-              Container(
-                key: _contactKey,
-                child: const MyContact(isDesktop: true),
-              ),
-              //const FunContainer(isDesktop: true),
-            ],
+            child: Column(
+              children: [
+                Container(
+                  key: _infoKey,
+                  child: const InfoContainer(isDesktop: true),
+                ),
+                Container(
+                  key: _projectsKey,
+                  child: MyProjects(isDesktop: true),
+                ),
+                Container(
+                  key: _experienceKey,
+                  child: MyExperience(isDesktop: true),
+                ),
+                Container(
+                  key: _educationKey,
+                  child: MyEducation(isDesktop: true),
+                ),
+                Container(
+                  key: _contactKey,
+                  child: const MyContact(isDesktop: true),
+                ),
+                //const FunContainer(isDesktop: true),
+              ],
+            ),
           ),
         ),
       ),

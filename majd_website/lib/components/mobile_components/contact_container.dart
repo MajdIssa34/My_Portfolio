@@ -162,7 +162,7 @@ class MyContact extends StatelessWidget {
                   width: retSize(isDesktop, 200, 140, 140),
                   child: MyButton(
                     onTap: () => _launchURL(
-                      "https://drive.google.com/file/d/1Xhjn0CE1iIkpkX-atHtR2yLZ8-UFAe0Q/view?usp=sharing",
+                      "https://drive.google.com/file/d/1XlptD_Iv0AzrlfvKxrvuQQ0b28e0k2o5/view?usp=sharing",
                     ),
                     str: "View Resume",
                     isDesktop: isDesktop,
@@ -173,7 +173,7 @@ class MyContact extends StatelessWidget {
                   width: retSize(isDesktop, 200, 140, 140),
                   child: MyButton(
                     onTap: () => _launchURL(
-                      "https://drive.google.com/file/d/1uo3yBnwy_PjgkJ0Sc8BEqq_gD1qbix16/view?usp=sharing",
+                      "https://drive.google.com/file/d/1vfUfd0ncK-EAxpowCi95YZrUnQWi98JQ/view?usp=sharing",
                     ),
                     str: "View Transcript",
                     isDesktop: isDesktop,

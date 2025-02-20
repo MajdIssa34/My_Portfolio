@@ -112,7 +112,7 @@ class InfoContainer extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  "Motivated and skilled software developer with a Bachelor of Information Technology, majoring in Software Technology, from Macquarie University. Experienced in full-stack development with proficiency in Java, JavaScript, HTML, CSS, Spring Boot, PostgreSQL, MongoDB, and Flutter. Adept at developing cross-platform applications, backend systems, and data-driven solutions. Passionate about building efficient, scalable systems and continuously adapting to new technologies and challenges. Ready to contribute and support any technology team with a versatile skill set and problem-solving approach.",
+                  "Software Engineer with a Bachelor of Information Technology, majoring in Software Technology, from Macquarie University. Experienced in full-stack development with expertise in Java, Python, JavaScript, SQL, Spring Boot, Node.js, PostgreSQL, and MongoDB. Skilled in building scalable microservices, RESTful APIs, and cloud-based applications (AWS, Azure). Passionate about optimizing backend performance, automating CI/CD pipelines, and developing data-driven solutions to solve complex problems.",
                   style: GoogleFonts.poppins(
                     fontSize: retSize(isDesktop, 15, 12, 8),
                     color: Colors.deepPurple,

@@ -64,6 +64,18 @@ class _MyProjectsState extends State<MyProjects> {
               controller: _pageController,
               children: <Widget>[
                 displayProject(
+                  "XLinkify - Social Media Platform",
+                  "Backend: Express.js, Node.js, MongoDB | Frontend: Flutter | Hosting: Render, Firebase",
+                  "A full-stack social media platform handling 100+ API requests/sec with 99.99% uptime. Features include user authentication (JWT), dynamic feed, and follow system.",
+                  "https://xlinkify.com",
+                ),
+                displayProject(
+                  "GymTrack - Gym Tracking API",
+                  "Backend: Java, Spring Boot, Hibernate, MySQL | Frontend: Flutter",
+                  "High-performance gym tracking system processing 52+ API requests/sec with 0% failure rate. Provides analytics, logging, and trainer monitoring tools.",
+                  "https://github.com/MajdIssa34/Gym-Tracking",
+                ),
+                displayProject(
                   "Freelancing Platform.",
                   "Languages: Java, Frameworks: Spring Boot, Flutter, Database: MongoDB, Frontend: Flutter.",
                   "This platform helps users find freelancers based on skills, portfolios, and ratings. It allows users to search, filter, and view profiles dynamically with an intuitive user interface, making it easy to hire professionals.",
@@ -109,12 +121,22 @@ class _MyProjectsState extends State<MyProjects> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(child: MyButton(onTap: _previousPage, str: "Previous", isDesktop: widget.isDesktop), width: retSize(widget.isDesktop, 150, 100, 75),),
-              SizedBox(child: MyButton(onTap: _nextPage, str: "Next", isDesktop: widget.isDesktop), width: retSize(widget.isDesktop, 150, 100, 75),)
+              SizedBox(
+                child: MyButton(
+                    onTap: _previousPage,
+                    str: "Previous",
+                    isDesktop: widget.isDesktop),
+                width: retSize(widget.isDesktop, 150, 100, 75),
+              ),
+              SizedBox(
+                child: MyButton(
+                    onTap: _nextPage, str: "Next", isDesktop: widget.isDesktop),
+                width: retSize(widget.isDesktop, 150, 100, 75),
+              )
             ],
           ),
           DotsIndicator(
-            dotsCount: 6,
+            dotsCount: 8,
             position: _currentIndex,
             decorator: const DotsDecorator(
               activeColor: Colors.white,
@@ -205,7 +227,7 @@ class _MyProjectsState extends State<MyProjects> {
 
   // Method to navigate to the next page
   void _nextPage() {
-    if (_currentIndex < 5) {
+    if (_currentIndex < 7) {
       // 3 is the last index (as there are 4 items)
       _pageController.nextPage(
         duration: const Duration(milliseconds: 300),

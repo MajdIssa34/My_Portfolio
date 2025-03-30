@@ -20,7 +20,9 @@ class InfoContainer extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(retSize(isDesktop, 30, 15, 10),),
+                padding: EdgeInsets.all(
+                  retSize(isDesktop, 30, 15, 10),
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -112,7 +114,7 @@ class InfoContainer extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  "Software Engineer with a Bachelor of Information Technology, majoring in Software Technology, from Macquarie University. Experienced in full-stack development with expertise in Java, Python, JavaScript, SQL, Spring Boot, Node.js, PostgreSQL, and MongoDB. Skilled in building scalable microservices, RESTful APIs, and cloud-based applications (AWS, Azure). Passionate about optimizing backend performance, automating CI/CD pipelines, and developing data-driven solutions to solve complex problems.",
+                  "Software Engineer with a Bachelor of Information Technology (Software Technology major) from Macquarie University. Experienced in full-stack development, specializing in Java, Python, JavaScript, Spring Boot, Node.js, PostgreSQL, and MongoDB. Skilled in building RESTful APIs, responsive UIs, and cloud-native applications (AWS, Azure). Passionate about backend optimization, CI/CD automation, and data-driven problem-solving.",
                   style: GoogleFonts.poppins(
                     fontSize: retSize(isDesktop, 15, 12, 8),
                     color: Colors.deepPurple,
@@ -131,7 +133,7 @@ class InfoContainer extends StatelessWidget {
                     color: Colors.deepPurple.shade600,
                   ),
                   textAlign: TextAlign.center,
-                ),              
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

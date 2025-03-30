@@ -5,27 +5,37 @@ import 'package:majd_website/constants/contstant_function.dart';
 class MyExperience extends StatelessWidget {
   final List<Experience> experiences = [
     Experience(
-      title: "Intern at Macquarie University",
-      date: "Jan 2023 - Jul 2023",
-      responsibilities: [        
-        "Improved engagement by 40% and reduced website load times by 35% through optimized algorithms",
-        "Developed an interactive website guiding over 5,000 students in selecting academic majors.",
-        "Achieved a 95% positive feedback score from usability testing with students and staff.",
-        "Improved engagement by 40% and reduced website load times by 35% throughoptimized algorithms.",
+      title: "Software Engineer | Independent Projects",
+      date: "2023 - Present",
+      responsibilities: [
+        "Built XLinkify, a full-stack social media platform handling 100+ API requests/sec with 99.99% uptime.",
+        "Developed GymTrack, a high-performance gym tracking API processing 52+ requests/sec with 0% failure rate.",
+        "Designed secure RESTful APIs with JWT authentication for efficient user access control.",
+        "Built database-driven applications using PostgreSQL, MySQL, and MongoDB, optimizing query performance."
       ],
     ),
     Experience(
-      title: "Shift Manager at ALDI",
+      title: "Software Engineer Intern | Macquarie University",
+      date: "Jan 2024 - Jul 2024",
+      responsibilities: [
+        "Developed a web platform for 1,000+ users to guide students in selecting academic majors.",
+        "Improved user engagement by 40% and reduced website load times by 35% through performance optimization.",
+        "Conducted testing and usability evaluations, receiving 95% positive feedback from students and staff."
+      ],
+    ),
+    Experience(
+      title: "Shift Manager | ALDI",
       date: "Jan 2023 - Present",
       responsibilities: [
-        "Ranked in the top 5% of most efficient ALDI workers in NSW, maintaining Operational Efficiency (OE) above 92% during all shifts.",
+        "Ranked in the top 5% of efficient workers in NSW, maintaining Operational Efficiency (OE) above 92%.",
         "Managed inventory restocking with 98% accuracy, minimizing stock discrepancies.",
-        "Consistently met Key Performance Indicators (KPIs) for sales, cleanliness, and customer experience.",
-        "Address and solve customer service issues",
-        "Briefed teams on priorities, optimized task assignments, and ensured smooth daily operations."
+        "Consistently met KPIs in sales, cleanliness, and customer satisfaction.",
+        "Resolved customer issues and ensured a smooth in-store experience.",
+        "Led daily team briefings and optimized task assignments for efficient operations."
       ],
     ),
   ];
+
   final int isDesktop;
 
   MyExperience({super.key, required this.isDesktop});
@@ -196,9 +206,7 @@ class _StaggeredExperienceCardState extends State<StaggeredExperienceCard>
                 Align(
                   alignment: Alignment.centerRight,
                   child: Icon(
-                    _isExpanded
-                        ? Icons.expand_less
-                        : Icons.expand_more,
+                    _isExpanded ? Icons.expand_less : Icons.expand_more,
                     color: Colors.deepPurple,
                   ),
                 ),

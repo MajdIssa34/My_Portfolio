@@ -60,8 +60,6 @@ class MyContact extends StatelessWidget {
     );
   }
 
- 
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -107,11 +105,15 @@ class MyContact extends StatelessWidget {
                       color: Colors.deepPurple,
                     ),
                   ),
-                  SelectableText(
-                    "issamajd00@gmail.com",
-                    style: GoogleFonts.poppins(
-                      fontSize: retSize(isDesktop, 18, 14, 10),
-                      color: Colors.black87,
+                  TextButton.icon(
+                    onPressed: _sendEmail,
+                    icon: const Icon(Icons.email_outlined,
+                        color: Colors.deepPurple),
+                    label: Text(
+                      "issamajd00@gmail.com",
+                      style: GoogleFonts.poppins(
+                        fontSize: retSize(isDesktop, 16, 12, 10),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 12),
@@ -130,6 +132,14 @@ class MyContact extends StatelessWidget {
                       color: Colors.black87,
                     ),
                   ),
+                  const SizedBox(height: 12),
+                  Text(
+                    "Based in Sydney, Australia – Open to Relocation",
+                    style: GoogleFonts.poppins(
+                      fontSize: retSize(isDesktop, 16, 12, 10),
+                      color: Colors.deepPurple.shade700,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -141,10 +151,11 @@ class MyContact extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                contactIcon("https://www.instagram.com/majd_issa34", 'Insta', 'Instagram'),
+                contactIcon("https://www.instagram.com/majd_issa34", 'Insta',
+                    'Instagram'),
                 contactIcon("https://github.com/MajdIssa34", 'Git', 'GitHub'),
                 contactIcon(
-                  "https://www.linkedin.com/in/majd-issa-652aa725b/",
+                  "https://www.linkedin.com/in/majd-issa34/",
                   'Link',
                   'LinkedIn',
                 ),
@@ -154,7 +165,7 @@ class MyContact extends StatelessWidget {
           const SizedBox(height: 16),
           // Buttons Section
           Padding(
-            padding: const EdgeInsets.fromLTRB(0,0,0,15),
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -162,23 +173,25 @@ class MyContact extends StatelessWidget {
                   width: retSize(isDesktop, 200, 140, 140),
                   child: MyButton(
                     onTap: () => _launchURL(
-                      "https://drive.google.com/file/d/1XlptD_Iv0AzrlfvKxrvuQQ0b28e0k2o5/view?usp=sharing",
+                      "https://docs.google.com/document/d/1Ukeb3iDHwKm8kpIMkRkYjJP3-NwlwINKBPpZH6SkqTI/edit?usp=sharing",
                     ),
                     str: "View Resume",
                     isDesktop: isDesktop,
                   ),
                 ),
-                SizedBox(width: retSize(isDesktop, 12, 6, 2),),
+                SizedBox(
+                  width: retSize(isDesktop, 12, 6, 2),
+                ),
                 SizedBox(
                   width: retSize(isDesktop, 200, 140, 140),
                   child: MyButton(
                     onTap: () => _launchURL(
                       "https://drive.google.com/file/d/1vfUfd0ncK-EAxpowCi95YZrUnQWi98JQ/view?usp=sharing",
                     ),
-                    str: "View Transcript",
+                    str: "View My Transcript",
                     isDesktop: isDesktop,
                   ),
-                ),              
+                ),
               ],
             ),
           ),

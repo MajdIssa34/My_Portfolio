@@ -59,7 +59,7 @@ class MyEducation extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(width: 16),               
+                const SizedBox(width: 16),
                 Image.asset(
                   iconPath,
                   width: retSize(isDesktop, 120, 55, 0),
@@ -150,31 +150,31 @@ class MyEducation extends StatelessWidget {
           const SizedBox(height: 16),
           educationCard(
             degree: "Bachelor of Information Technology",
-            university: "Macquarie University",
-            years: "2022 - 2024",
+            university: "Macquarie University, Australia",
+            years: "Jul 2022 – Feb 2025",
             achievements:
-                "- High Distinction (WAM: 87.0)\n- Dean's List\n- Merit Qualified in 2024",
+                "- Graduated with High Distinction (WAM: 87.0)\n- Dean's List (Every Semester)\n- Macquarie Univeristy Academic Excellence Award",
             courses: [
               "Object-Oriented Programming Practices",
               "Data Science",
               "Computer Networks",
               "Mobile Application Development",
-              "Programming Languages"
+              "Programming Languages",
             ],
-            iconPath: "assets/images/MQ.png", // Add MQ logo here
+            iconPath: "assets/images/MQ.png", // Macquarie University logo
           ),
           educationCard(
-            degree: "Bachelor of Computer Engineering",
+            degree: "Bachelor of Computer Engineering (1 Year Only)",
             university: "Holy Spirit University of Kaslik, Lebanon",
-            years: "2021 - 2022",
-            achievements: "- GPA: 3.3",
+            years: "Jul 2021 – Jun 2022",
+            achievements: "- Completed 1 year with GPA: 3.4/4.0",
             courses: [
               "Calculus I, II, III",
               "Algebra I, II",
               "Data Structures and Algorithms",
-              "Logic Design"
+              "Logic Design",
             ],
-            iconPath: "assets/images/Usek.png", // Add Holy Spirit logo here
+            iconPath: "assets/images/Usek.png", // USEK logo
           ),
         ],
       ),
